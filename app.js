@@ -18,9 +18,9 @@ if (calcularBtn) {
     // Resto disponible
     let disponible = Math.max(0, ingresos - totalGastos);
 
-    // Calcular ahorro y ocio (20% cada uno del disponible)
-    let ahorro = disponible * 0.2;
-    let ocio = disponible * 0.2;
+    // Calcular ahorro y ocio (50% cada uno del disponible)
+    let ahorro = disponible * 0.5;
+    let ocio = disponible * 0.5;
 
     // Guardar en localStorage
     localStorage.setItem("totalGastos", totalGastos.toFixed(2));
@@ -36,7 +36,7 @@ if (calcularBtn) {
 if (window.location.pathname.includes("resultado.html")) {
     document.getElementById("totalGastos").innerText = localStorage.getItem("totalGastos") + " €";
     document.getElementById("ahorro").innerText = localStorage.getItem("ahorro") + " €";
-    document.getElementById("ocio").innerText = localStorage.getItem("ocio") + " €";
+    document.getElementById("ocio").innerText = localStorage.getItem("ocio") + " € Disponible Te recomiendo guardarlo.";
 }
 
 // GUARDAR META
