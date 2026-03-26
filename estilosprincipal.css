@@ -1,0 +1,186 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('MULTIMEDIA/Cafeteria.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.0);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    animation: slideUp 1s ease-out 0.5s both;
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, p, .speech-bubble, button {
+    color: #ffffff;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background: #c9782c;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+button:hover {
+    background: #764ba2;
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+    }
+}
+
+.main-header {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #d2b48c;
+    color: #2f1c0f;
+    text-align: center;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.container {
+    margin-top: 90px;
+}
+
+.piggy-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: -10px;
+}
+
+.card-box {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.speech-bubble {
+    background: rgba(201, 120, 44, 0.75);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 250px;
+    position: relative;
+    text-align: left;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 10px solid #c9782c;
+}
+
+.piggy-image {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.piggy-image:hover {
+    transform: scale(1.05);
+}
+
+.piggy-image.bounce {
+    animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}

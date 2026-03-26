@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>App Ahorro Mejorada</title>
+    <link rel="stylesheet" href="estilosmain.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="title-box">
+            <h1>Calculadora de Ahorro</h1>
+        </div>
+        <div class="card-box">
+
+            <!-- INGRESOS -->
+            <div class="section-box">
+                <div>
+                    <label>Ingresos mensuales (€):</label>
+                    <input type="number" id="ingresos" min="0">
+                    <img src="MULTIMEDIA/CerditoCalculando.png" alt="Cerdito Calculando" style="max-width: 120px; max-height: 120px;">
+                </div>
+            </div>
+
+            <!-- GASTOS FIJOS -->
+            <div class="section-box">
+                <h2>Gastos Fijos</h2>
+                <div>
+                    <label>Comida (€):</label>
+                    <input type="number" id="gastoComida" min="0" value="0">
+                </div>
+                <div>
+                    <label>Vivienda (€):</label>
+                    <input type="number" id="gastoVivienda" min="0" value="0">
+                </div>
+                <div>
+                    <label>Coche (€):</label>
+                    <input type="number" id="gastoCoche" min="0" value="0">
+                </div>
+                <div>
+                    <label>Varios (€):</label>
+                    <input type="number" id="gastoVarios" min="0" value="0">
+                </div>
+            </div>
+
+            <!-- BOTÓN -->
+            <div class="section-box" style="display: flex; justify-content: space-between; align-items: center;">
+                <button id="calcularBtn">Calcular</button>
+                
+            </div>
+
+            <!-- META -->
+            <div class="section-box">
+                <h2>Meta</h2>
+                <div>
+                    <label>Nombre de la meta:</label>
+                    <input type="text" id="nombreMeta">
+                </div>
+                <div>
+                    <label>Cantidad objetivo (€):</label>
+                    <input type="number" id="cantidadMeta" min="0">
+                </div>
+                <button id="guardarMetaBtn">Guardar Meta</button>
+
+                <!-- INFO META -->
+                <h3>Progreso</h3>
+                <p id="infoMeta"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conectar JS -->
+    <script src="app.js"></script>
+
+</body>
+</html>
